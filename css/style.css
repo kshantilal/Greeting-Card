@@ -1,0 +1,68 @@
+*{
+	text-decoration: none;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+}
+img{
+	background-image: no-repeat;
+}
+
+#card{
+	float: right;
+	width: 100%;
+	height: 500px;
+	background-color: white;
+	background-size: cover;
+
+}
+
+#color{
+	width: 100%;
+	height: 490px;
+	opacity: 0.4;
+}
+
+.title{
+	margin: 20px;
+}
+
+.buttons{
+	margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1{
+	overflow-wrap: break-word;
+	margin: 0px;
+}
+
+h1.message-text{
+	position: absolute;
+	width: 100px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+#personal-message{
+	text-align: center;
+	color: white;
+	overflow-wrap: break-word;
+	width: 335px;
+	position: absolute;
+	padding-top: 150px;
+	padding-right: 20px;
+	padding-left: 20px;
+
+}
+
+
+
+
