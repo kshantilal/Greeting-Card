@@ -17,6 +17,7 @@ img{
 	height: 500px;
 	background-color: white;
 	background-size: cover;
+	box-shadow: 5px 5px 5px #888888;
 
 }
 

@@ -25,7 +25,7 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-6">
-						<form id="Form" name="Form" action="submit.html" method="post" onsubmit="return personalMessageForm()">
+						<form id="Form" name="Form" action="submit" method="post" onsubmit="">
 							<!-- EVENTS -->
 							<div class="form-group">
 								<label for="sel1">Event</label>
@@ -35,26 +35,23 @@
 									<option value="GuyFawkes">Guy Fawkes</option>
 								</select>
 							</div>
-
 							<div class="form-group">
 								<label for="sel1">Color</label>
 								<select class="form-control" id="background-change">
+									<option value="transparent">No Color</option>
 									<option value="blue">Blue</option>
 									<option value="red">Red</option>
 									<option value="green">Green</option>
-									<option value="transparent">No Color</option>
 								</select>
 							</div>
-
 							<div class="form-group">
 								<label for="sel1">Your Font</label>
 								<select class="form-control" id="Fonts">
 									<option value="helvetica">Helvetica</option>
-									<option value="arial">Arial</option>
+									<option value="Comic Sans MS">Comic Sans</option>
 									<option value="Snell Roundhand">Calligraphy</option>
 								</select>
 							</div>
-
 							<div class="form-group">
 								<label for="sel1">Your Border</label>
 								<select class="form-control" id="Border">
@@ -62,14 +59,14 @@
 									<option value="double">Double</option>
 									<option value="dotted">Dotted</option>
 								</select>
-							</div>
-							
+							</div>							
 							<div class="form-group">
 									<label for="comment">Personalised Message</label>
 									<input class="form-control" type="text" id="Comment" class="message" name="message">
 									<span id="errors"></span>
 							</div>
-							<input type="submit" id="submit" class="btn btn-default"></input>
+							<input type="submit" id="submit" value="Submit" class="btn btn-default"></input>
+
 						</form>
 					</div>
 					
@@ -82,14 +79,6 @@
 				</div> <!-- row -->
 			</div><!-- container -->    
 		</div> <!-- main-container -->
-
-
-										
-
-										
-
-
-
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

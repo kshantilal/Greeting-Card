@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	
 	var PersonalCard = true;
+	var Valid = false;
 	
 
 	$("#submit").click(function(){
@@ -11,7 +12,12 @@ $(document).ready(function(){
 		var Message = $("#Comment").val();
 		var Event = $("#Event").val();
 		var border = $("#Border").val();
-		var errors = $('.form-group').find("span");
+
+	if ($('#Comment').val().length === 0) {
+			$('#Comment').parent().find('#errors').text("This field is required");
+			return;
+		}
+
 		
 
 		if (PersonalCard === true) {
@@ -23,40 +29,30 @@ $(document).ready(function(){
 			$("#card").css('border',"5px "+border+" white");
 		}
 
-	var valid = true;
-	function personalMessageForm(){
-		event.preventDefault();
-		personalMessage();
-		var message = document.getElementById('Comment').value;
-		if (valid === true) {
-			console.log('hello');
-			document.getElementById('Form').submit();
 
-		};
+	});
 
-	};
-
-	function personalMessage(){
-		var message = document.getElementById('Comment');
-		var errors = document.getElementById('errors');
-		errors.innerText = "";
-		if (message.length == 0) {
-			errors.innerText = "This field is required";
-			valid = false;
-			return;
-
-		}else if (message.length > 30){
-			errors.innerText = "This field needs to be less than 30 characters";
-			valid = false;
+	$('#Comment').blur(function(){
+		$(this).parent().find('span');
+		var errors = $(this).parent().find('#errors')
+		errors.empty();
+		if ($(this).val().length === 0) {
+			errors.text("This field is required");
 			return;
 		}
 
-	};
+		//Max Length
+		if ($(this).val().length > 20){
+			errors.text("This field cannot to be more than 20 characters");
+			return;
+		}
+		Valid = true;
+		
+	})
 
-	});
+
 		
-	
-		
+			
 
 
 });
